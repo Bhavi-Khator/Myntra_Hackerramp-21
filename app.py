@@ -28,10 +28,6 @@ mysql = MySQL(app)
 def home(): 
     return render_template("home.html");
 
-@app.route('/details')
-def add_details():
-    return render_template("add_details.html");
-
 @app.route('/create')
 def order():
     cursor = mysql.connection.cursor()
