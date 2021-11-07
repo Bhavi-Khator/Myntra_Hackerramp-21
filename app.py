@@ -93,7 +93,7 @@ def check():
     for url in cursor:
         s = s + "," + url[1]
     s = s[1:]
-    #cursor.execute("Insert into votes_table values(default, 'https://i.ibb.co/0Fpky4z/Outfit3.jpg', now(), 0, 0, 11.162433 , %s)" % (s));
+    cursor.execute("Insert into votes_table values(default, 'https://i.ibb.co/0Fpky4z/Outfit3.jpg', now(), 0, 0, 11.162433 , %s)" % (s));
     mysql.connection.commit()
     cursor.close()
     return redirect('/browse')
