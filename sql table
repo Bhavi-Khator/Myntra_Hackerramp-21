@@ -1,0 +1,9 @@
+CREATE TABLE `Votes Table` (
+`Clothes URL` TEXT(255) NOT NULL,
+`Clothes ID` INT(255) NOT NULL AUTO_INCREMENT,
+`Date Created` INT(255) NOT NULL,
+`Upotes ` INT(10000) unsigned DEFAULT NULL,
+`Downvotes` INT(10000) unsigned DEFAULT NULL,
+`Position` INT(100) unsigned zerofill DEFAULT NULL,
+PRIMARY KEY (`Clothes ID`)
+);
