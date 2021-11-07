@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container mt-5">
+    <div class="row h-75 m-2">
+        <div class="col-6 bg-light">
+
+
+            {% for image in images %}
+            <div class=" border border-white border-2 image draggable d-inline-block">
+                <img class="image__img draggable" src='{{ image[3] }}'>
+                <div class="image-overlay">
+                    <div class="image-title"><a href="/delete/{{ image[0] }}"><i class="far fa-trash-alt fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            {% endfor %}
+
+
+
+            </div>
+        <div class="col-6 bg-white border border-dark rounded">
+
+        </div>
+
+
+    </div>
+
+    
+<button type="button" class="btn btn-info mt-3 float-end mx-5">Submit Outfit</button>
+</div>
+
+{% endblock %}
