@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<section class="py-5">
+    <div class="container px-4 px-lg-5 mt-5">
+        <h2 class="fw-bolder mb-4 text-uppercase">Add Your Items.</h2>
+
+        <div class="row g-2">
+            <div class="col-md-4 offset-md-2">
+                
+            <div class="card text-center" style="width: 20rem;">
+                <img src="" class="card-img-top" id="image_src" alt="">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <form action="/form" method="POST">
+                    <div class="mb-3">
+                      <label for="img_url" class="form-label">Enter the URL</label>
+                      <input type="text" class="form-control" id="image_url" aria-describedby="emailHelp" name="img_url">
+                    </div>
+                  <div class="d-grid gap-2 ">
+                    <button class="btn btn-dark btn-bg" type="submit">Add Another Item</button>
+                    
+                  </form>
+                    <a class="btn btn-success btn-bg" role="button" href="/create">Create Outfit</a>
+                  </div>
+
+            
+          </div>
+    </div>
+</section>
+
+
+{% endblock %}
