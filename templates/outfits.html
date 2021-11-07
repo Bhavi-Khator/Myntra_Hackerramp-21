@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<header class="bg-dark py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">View Outfits</h1>
+        </div>
+    </div>
+</header>
+<section class="py-5">
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-5 justify-content-center">
+
+            {% for outfit in outfits %}
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top outfit-image" src="{{ outfit[1] }}"
+                        alt="..." />
+                    <div class="card-footer mt-0 border-top-0 bg-transparent">
+                        <span class="text-start"><a class="btn" href="/upvote/{{ outfit[0] }}"><i
+                                    class="fas fa-arrow-up fa-2x"></i></a><b>{{ outfit[3] }}</b></span>
+                        <span class="text-end"><a class="btn" href="/downvote/{{ outfit[0] }}"><i
+                                    class="fas fa-arrow-down fa-2x"></i></a><b>{{ outfit[4] }}</b></span>
+                        <div class="text-center">
+                        <a class="btn btn-outline-dark mx-auto" href="/show/{{outfit[0] }}">Show Items</a></div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}
